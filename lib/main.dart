@@ -8,8 +8,6 @@ import 'package:mom_dance_admin/provider/image_provider.dart';
 import 'package:mom_dance_admin/provider/pick_provider.dart';
 import 'package:mom_dance_admin/provider/text_color_provider.dart';
 import 'package:mom_dance_admin/provider/value_provider.dart';
-import 'package:mom_dance_admin/screen/countdown/count_down_screen.dart';
-import 'package:mom_dance_admin/screen/login/login_screen.dart';
 import 'package:provider/provider.dart';
 
 import 'firebase_options.dart';
