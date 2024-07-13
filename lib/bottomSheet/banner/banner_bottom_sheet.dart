@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:mom_dance_admin/provider/image_provider.dart';
 import 'package:mom_dance_admin/provider/pick_provider.dart';
 import 'package:provider/provider.dart';
 import '../../constants.dart';
@@ -51,7 +52,7 @@ class BannerBottomSheet extends StatelessWidget {
                       color: Colors.grey.shade300,
                       borderRadius: BorderRadius.circular(10.0),
                     ),
-                    child:   Container(
+                    child: Container(
                         width: 200.0,
                         height: 200.0,
                         color: Colors.grey,
@@ -96,6 +97,9 @@ class BannerBottomSheet extends StatelessWidget {
                     text: "Update" , onClicked: () async{
                   provider.setLoading(true);
                   final downloadUrl = await imageProvider.firebaseStorageImage(image: imageProvider.pickedImage!);
+
+                  // await imageProvider.uploadImage();
+
 
                  await firestore.collection("banner").doc("banners").update({
                     keyName : downloadUrl.toString()

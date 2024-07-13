@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:mom_dance_admin/main_screen.dart';
 import 'package:mom_dance_admin/provider/MenuAppController.dart';
 import 'package:mom_dance_admin/provider/countdown_provider.dart';
+import 'package:mom_dance_admin/provider/image_provider.dart';
 import 'package:mom_dance_admin/provider/pick_provider.dart';
 import 'package:mom_dance_admin/provider/text_color_provider.dart';
 import 'package:mom_dance_admin/provider/value_provider.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => MenuAppController()),
         ChangeNotifierProvider(create: (_) => PickerProvider()),
         ChangeNotifierProvider(create: (_) => CountdownProvider()),
+        ChangeNotifierProvider(create: (_) => ImageUploadProvider()),
       ],
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,

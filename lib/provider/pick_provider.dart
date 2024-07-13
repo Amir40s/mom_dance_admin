@@ -71,7 +71,7 @@ class PickerProvider with ChangeNotifier {
 
   Future<String> firebaseStorageImage({required Uint8List image}) async {
     final Reference reference =
-    _storage.ref('/StudentAdmissionFormImage/${DateTime.now().toString()}');
+    _storage.ref('/StudentAdmissionFormImage/${DateTime.now().toString()}.jpg');
     final UploadTask uploadTask = reference.putData(image);
     TaskSnapshot snapshot = await uploadTask;
     final String downloadUrl = await snapshot.ref.getDownloadURL();
